@@ -1,2 +1,2 @@
-# cms
+# apis
 Pass chromosome, start and end and return the corresponding cM value
