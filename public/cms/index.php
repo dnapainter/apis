@@ -61,12 +61,12 @@ foreach($data as $segment){
         $segment->cm = number_format(($endcM - $startcM),1);
     }
     else {
-        $segment->cm = "not calculated";
+        $segment->cm = "0";
     }
     if($segment->chr==23){
         $segment->chr = 'X';
     }
-   //print_r($segment);
+   print_r($segment);
 
 }
 
