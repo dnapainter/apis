@@ -66,7 +66,6 @@ foreach($data as $segment){
     if($segment->chr==23){
         $segment->chr = 'X';
     }
-   print_r($segment);
 
 }
 
