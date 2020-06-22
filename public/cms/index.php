@@ -10,9 +10,9 @@ if ($conn->connect_error) {
 
 $errorstring = '';
 // get params: chr, start, end, build (can update later so can take an array of items)
-$chr = 0;
-$start = 0;
-$end = 0;
+$chr = false;
+$start = false;
+$end = false;
 
 if(isset($_GET['chr'])){ $chr = stripString($_GET['chr']); }
 if(isset($_GET['start'])){ $start = stripString($_GET['start']);  }
@@ -20,17 +20,16 @@ if(isset($_GET['end'])){ $end = stripString($_GET['end']);  }
 
 
 if($chr=='x' || $chr=='X'){
-	$chr = 23;
+    $chr = 23;
 }
-
 // error checking - for chromosome
-if($chr < 1 || $chr > 23){
+if(!is_numeric($chr) || $chr < 1 || $chr > 23){
 	$errorstring .= 'Chromosome is not valid\n';
 }
-if($start == 0 || !is_numeric($start)){
+if(!is_numeric($start)){
     $errorstring .= 'Start position is not valid\n';
 }
-if($end == 0|| !is_numeric($end)){
+if(!is_numeric($end)){
     $errorstring .= 'End position is not valid\n';
 }
 
