@@ -44,7 +44,7 @@ else {
     if($errorstring ==''){
         $data[0] = (object)["chr" => $chr,"start" => $start,"end" =>$end];
     }else {
-        echo $errorstring;
+        //echo $errorstring;
     }   
 }
 
@@ -75,7 +75,8 @@ if(count($data) >0){
   die;
 } 
 else {
-  $mydata = array("error" => $errorstring);
+    $mydata = [];
+  $mydata[0] = (object)["error" => $errorstring];
     echo json_encode($mydata);
     die;  
 }
