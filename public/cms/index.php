@@ -54,7 +54,9 @@ else {
 
 
 foreach($data as $segment){
-
+    if($segment->chr =='X'){
+        $segment->chr = 23;        
+    }
     $startcM = getMapPos($segment->chr, $segment->start, $conn);
     $endcM = getMapPos($segment->chr, $segment->end, $conn);
     if($startcM !==false && $endcM !==false && ($endcM > $startcM)){
