@@ -1,7 +1,5 @@
 <?php include("../config.inc.php");
 
-echo 'head';
-exit;
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
