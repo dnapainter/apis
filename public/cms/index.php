@@ -1,4 +1,4 @@
-<?php include("../../config.inc.php");
+<?php include("../../../config.inc.php");
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
