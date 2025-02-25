@@ -167,7 +167,7 @@ function getLatLngfromGeoname($geoname){
 }
 
 function getLatLngfromLocation($features){
-    print_r($features);
+    //print_r($features);
     return $features[0]->center[1].','.$features[0]->center[0];
 }
 
